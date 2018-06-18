@@ -1,0 +1,156 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: #666;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: #666;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	// height: 100%;
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	// height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 1.6rem;
+	line-height: 1.25;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+	color: #1c1a1a;
+	background-color: #fff;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+}
+.button {
+	@include btn;
+	padding: 1.5rem;
+	font-size: 1.4rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: .4rem;
+	color: #fff;
+	background-color: $color-accent;
+	transition: all .5s ease;
+	&:hover, &:active {
+        background-color: lighten($color-accent, 10%);
+	}
+	&.button_icon {
+		// padding-left: 1.5rem;
+		display: flex;
+		img {
+			flex: 0 0 auto;
+			align-self: center;
+	        display: inline-block;
+	        vertical-align: middle;
+	        max-width: 2rem;
+	        max-height: 2rem;
+	        width: auto;
+	        height: auto;
+			margin-right: 1rem;
+	    }
+	}
+}
+
+
+//Custom Styles Here
+@import "build/scss/components/header.scss";
+@import "build/scss/components/banner.scss";
+@import "build/scss/components/services.scss";
+
+//@import "build/scss/components/magnific-popup.scss";
+
+//ALWAYS END
+// @import "components/media.scss";
+
+//Load Libs SASS
+// @import "html/libs/animate/animate.sass";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+//@import "html/libs/magnific-popup/dist/magnific-popup";
+
+@media only screen and (max-width : 1200px) {
+	html {
+		font-size: 9.5px;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
