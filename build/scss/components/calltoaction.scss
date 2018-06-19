@@ -1,0 +1,60 @@
+.calltoaction {
+    padding: 7rem 0;
+
+}
+.calltoaction__box {
+    padding: 3rem;
+    border-radius: .5rem;
+    background-image: linear-gradient(to left, #afe2ff 0%, #0072c7 100%);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.calltoaction__title {
+    margin: 0;
+    font-size: 3.6rem;
+    line-height: 1.1;
+}
+.calltoaction__content {
+    display: flex;
+    // flex-wrap: wrap;
+}
+.calltoaction__text {
+    flex: 0 1 auto;
+    margin: 2rem 0 0 0;
+    line-height: 1.6;
+}
+.calltoaction__button {
+    flex: 0 1 auto;
+    margin: 2rem 0 0 3rem;
+    // margin: 0 0 0 3rem;
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .calltoaction__content {
+        flex-wrap: wrap;
+    }
+    .calltoaction__button {
+        margin: 3rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

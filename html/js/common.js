@@ -54,4 +54,17 @@ $(function() {
         smartSpeed: 600
     });
 
+
+    /*******************************************************/
+    //SERVICES TABS
+    /*******************************************************/
+    $('.services-home__tabs').each(function() {
+        $(this).prepend('<div class="services-home__buttons"></div>');
+        $(this).find('.services-home__title').appendTo('.services-home__buttons');
+        $(this).children('.services-home__section').not(':first').hide();
+        $(this).children('.services-home__buttons').on('click', '.services-home__title:not(.active)', function() {
+            $(this).addClass('active').siblings().removeClass('active').closest('.services-home__tabs').children('.services-home__section').stop().slideUp(300).eq($(this).index()).stop().slideDown(300);
+        }).children('.services-home__title').first().addClass('active');
+    });
+
 });

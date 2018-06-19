@@ -107,7 +107,9 @@
 .header__contacts {
     flex: 0 0 auto;
     margin: 2rem 1rem;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .header__contacts-title {
@@ -539,7 +541,7 @@
         justify-content: space-around;
     }
     .header__contacts {
-        text-align: center;
+        align-items: center;
     }
     .header__logo,
     .header__button {
@@ -643,7 +645,8 @@
 
 @media only screen and (max-width : 480px) {
     .header__additional-nav {
-        margin: 0;
+        // margin: 0;
+        padding: 0 15px;
         ul {
             width: 100%;
             margin: 2rem 0;

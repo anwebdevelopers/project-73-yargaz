@@ -88,9 +88,7 @@ a {
 	color: #fff;
 	background-color: $color-accent;
 	transition: all .5s ease;
-	&:hover, &:active {
-        background-color: lighten($color-accent, 10%);
-	}
+
 	&.button_icon {
 		// padding-left: 1.5rem;
 		display: flex;
@@ -106,13 +104,30 @@ a {
 			margin-right: 1rem;
 	    }
 	}
+	&.button_white {
+		background-color: #fff;
+		color: $color-accent;
+	}
+	&:hover, &:active {
+		color: #fff;
+        background-color: lighten($color-accent, 10%);
+	}
 }
-
+.title {
+	margin: 0;
+	font-size: 4.8rem;
+	line-height: 1;
+	font-weight: 700;
+}
 
 //Custom Styles Here
 @import "build/scss/components/header.scss";
 @import "build/scss/components/banner.scss";
-@import "build/scss/components/services.scss";
+@import "build/scss/components/services-home.scss";
+@import "build/scss/components/news-home.scss";
+@import "build/scss/components/advantages.scss";
+@import "build/scss/components/navigaton.scss";
+@import "build/scss/components/calltoaction.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 
