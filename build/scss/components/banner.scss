@@ -26,7 +26,7 @@
 
                 &:hover,
                 &:active {
-                    background-color: $color-accent;
+                    background-color: $color-main;
                     &:before {
                         border-color: #fff;
                     }
@@ -38,8 +38,8 @@
                     left: 50%;
                     width: 1.5rem;
                     height: 1.5rem;
-                    border-left: 2px solid lighten($color-accent, 20%);
-                    border-bottom: 2px solid lighten($color-accent, 20%);
+                    border-left: 2px solid lighten($color-main, 20%);
+                    border-bottom: 2px solid lighten($color-main, 20%);
                     transition: all 0.3s ease;
                 }
 
@@ -84,7 +84,7 @@
                 &:active,
                 &:hover,
                 &.active {
-                    background-color: $color-accent;
+                    background-color: $color-main;
                 }
                 // &.active {
                 //     width: 1.5rem;
@@ -127,7 +127,7 @@
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: .1rem;
-    color: $color-accent;
+    color: $color-main;
     // text-transform: uppercase;
 }
 // .banner__subtitle {

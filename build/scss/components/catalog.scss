@@ -1,0 +1,107 @@
+.catalog {
+    margin: 4rem 0 0 0;
+}
+.catalog__head {
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.catalog__title {
+    flex: 0 1 auto;
+    margin: 0 2rem 0 0;
+    font-size: 2.4rem;
+    a {
+        text-decoration: none;
+        color: $color-main;
+        border-bottom: 1px solid transparentize($color-main, .8);
+        transition: all .5s ease;
+        &:hover, &:active {
+            color: lighten($color-main, 10%);
+        }
+    }
+}
+.catalog__qty {
+    flex: 0 1 auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.catalog__box {
+     margin: 3rem -1.5rem 0 -1.5rem;
+
+     display: flex;
+     flex-wrap: wrap;
+}
+.catalog__item {
+    flex: 0 0 auto;
+    width: calc(25% - 3rem);
+    margin: 3rem 1.5rem;
+}
+.catalog__item-img {
+    margin: 0;
+    img {
+        display: inline-block;
+        vertical-align: baseline;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.catalog__item-price {
+    margin: 3rem 0 0 0;
+    font-weight: 700;
+}
+.catalog__item-title {
+    margin: 1rem 0 0 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    a {
+        text-decoration: none;
+        color: $color-main;
+        transition: all .5s ease;
+        &:hover, &:active {
+            color: lighten($color-main, 10%);
+        }
+    }
+}
+.catalog__item-button {
+    margin: 2rem 0 0 0;
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .catalog__item {
+        width: calc(33.3333% - 3rem);
+    }
+
+}
+
+@media only screen and (max-width : 640px) {
+    .catalog__item {
+        width: calc(50% - 3rem);
+    }
+
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .catalog__box {
+        display: block;
+        margin: 6rem 0 0 0;
+    }
+    .catalog__item {
+        width: auto;
+        margin: 6rem 0 0 0;
+        // text-align: center;
+    }
+}

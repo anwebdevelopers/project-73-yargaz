@@ -86,17 +86,16 @@ a {
 	text-transform: uppercase;
 	border-radius: .4rem;
 	color: #fff;
-	background-color: $color-accent;
+	background-color: $color-main;
 	transition: all .5s ease;
 
 	&.button_icon {
 		// padding-left: 1.5rem;
-		display: flex;
+		display: inline-flex;
+		align-items: center;
 		img {
 			flex: 0 0 auto;
-			align-self: center;
-	        display: inline-block;
-	        vertical-align: middle;
+			display: block;
 	        max-width: 2rem;
 	        max-height: 2rem;
 	        width: auto;
@@ -106,18 +105,148 @@ a {
 	}
 	&.button_white {
 		background-color: #fff;
+		color: $color-main;
+	}
+	&.button_phantom_accent {
 		color: $color-accent;
+		background-color: rgba(255,255,255,0);
+		border: 1px solid $color-accent;
+		&:hover, &:active {
+			border-color: lighten($color-main, 10%);
+		}
 	}
 	&:hover, &:active {
 		color: #fff;
-        background-color: lighten($color-accent, 10%);
+        background-color: lighten($color-main, 10%);
 	}
+}
+.main {
+	padding: 3rem 0 5rem 0;
 }
 .title {
 	margin: 0;
 	font-size: 4.8rem;
 	line-height: 1;
 	font-weight: 700;
+}
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1.4rem;
+	color: #777;
+
+	display: flex;
+	flex-wrap: wrap;
+	li {
+		flex: 0 1 auto;
+		margin: 0 1rem 0 0;
+		a {
+			color: $color-main;
+			transition: all .5s ease;
+			&:hover, &:active {
+				color: lighten($color-main, 10%);
+			}
+			position: relative;
+			padding: 0 1.5rem 0 0;
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: .7rem;
+				width: .5rem;
+				height: .5rem;
+				border-radius: 50%;
+				background-color: currentColor;
+			}
+		}
+	}
+	+ * {
+		margin-top: 2rem;
+	}
+}
+.page__content {
+	margin: 3rem 0 0 0;
+	line-height: 1.6;
+	* {
+		max-width: 100% !important;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 600;
+		color: #000;
+	}
+	p,ul,ol,img {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	ul,ol {
+		li {
+			margin: .5rem 0 0 0;
+		}
+	}
+	ul {
+		padding: 0;
+	    list-style: none;
+	    li {
+	        position: relative;
+	        padding: 0 0 0 2rem;
+	        &:before {
+	            content: '';
+	            position: absolute;
+	            left: 0;
+	            top: .5em;
+	            width: .5rem;
+	            height: .5rem;
+	            border-radius: 50%;
+	            background-color: $color-main;
+	        }
+	    }
+	}
+	a {
+		text-decoration: none;
+		color: $color-main;
+		transition: all 0.5s ease;
+		&:active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	*:first-child {
+		margin-top: 0;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
+	*.align-left {
+		float: left;
+		margin-right: 5rem;
+	}
+	*.align-right {
+		float: right;
+		margin-right: 5rem;
+	}
+	table {
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: #dadada;
+        display: block;
+        overflow-x: auto;
+		max-width: 100%;
+		font-size: 1.4rem;
+
+        th, td {
+            padding: 2rem;
+            text-align: left;
+        }
+        th {
+            background-color: $color-main;
+			color: #fff;
+        }
+        td {
+            background-color: #fff;
+			color: #000;
+        }
+    }
 }
 
 //Custom Styles Here
@@ -128,6 +257,10 @@ a {
 @import "build/scss/components/advantages.scss";
 @import "build/scss/components/navigaton.scss";
 @import "build/scss/components/calltoaction.scss";
+@import "build/scss/components/catalog.scss";
+@import "build/scss/components/category.scss";
+@import "build/scss/components/news.scss";
+@import "build/scss/components/footer.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 

@@ -14,7 +14,7 @@
     justify-content: space-between;
 }
 .header__logo {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin: 2rem 1rem 2rem 0;
     img {
         display: inline-block;
@@ -25,7 +25,7 @@
     }
 }
 .header__emergency {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     padding: 2rem 1rem;
     text-align: right;
 
@@ -64,12 +64,12 @@
         color: inherit;
         transition: all .5s ease;
         &:hover, &:active {
-            color: $color-accent;
+            color: $color-main;
         }
     }
 }
 .header__branches {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     padding: 2rem 1rem;
 
     background-size: contain;
@@ -78,13 +78,13 @@
 }
 .header__branches-content {
     text-decoration: none;
-    color: $color-accent;
+    color: $color-main;
     margin: .5rem 0 0 0;
     display: flex;
     align-items: center;
     transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-accent, 10%);
+        color: lighten($color-main, 10%);
     }
 }
 .header__branches-icon {
@@ -105,7 +105,7 @@
     border-bottom: 1px dotted currentColor;
 }
 .header__contacts {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -113,10 +113,12 @@
 }
 
 .header__contacts-title {
+    flex: 0 1 auto;
     font-size: 1.4rem;
     color: #777;
 }
 .header__contacts-phone {
+    flex: 0 1 auto;
     text-decoration: none;
     color: #000;
     margin: .5rem 0 0 0;
@@ -124,7 +126,7 @@
     align-items: center;
     transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-accent, 10%);
+        color: lighten($color-main, 10%);
         span {
             color: inherit;
         }
@@ -152,16 +154,18 @@
     }
 }
 .header__contacts-mail {
+    flex: 0 1 auto;
     display: block;
     margin: .5rem 0 0 0;
     font-size: 1.4rem;
-    color: $color-accent;
+    color: $color-main;
+    transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-accent, 10%);
+        color: lighten($color-main, 10%);
     }
 }
 .header__button {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     margin: 2rem 0 2rem 1rem;
 }
 
@@ -169,7 +173,7 @@
     //padding: 2rem 0;
     position: relative;
     z-index: 0;
-    background-color: $color-accent;
+    background-color: $color-main;
     color: #fff;
 }
 .header__bottom-box {
@@ -201,7 +205,7 @@
 
         height: 2px;
         background-color: #fff;
-        transition: all 0.5s ease;
+        transition: all 0.3s ease;
     }
 
     span {
@@ -363,7 +367,7 @@
                     white-space: nowrap;
                     color: #333;
                     &:hover, &:active {
-                        background-color: transparentize($color-accent, .9);
+                        background-color: transparentize($color-main, .9);
                     }
                 }
 
@@ -518,7 +522,7 @@
                 color: inherit;
                 transition: all .5s ease;
                 &:hover, &:active {
-                    color: $color-accent;
+                    color: $color-main;
                 }
             }
         }
