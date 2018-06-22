@@ -13,10 +13,11 @@
 
     transition: all .5s ease;
 	&:hover, &:active {
-        color: lighten($color-main, 10%);
+        color: $color-main;
 	}
     display: flex;
 }
+
 .news__img {
     margin: 0 2rem 0 0;
     flex: 0 0 auto;
@@ -49,6 +50,7 @@
     line-height: 1.6;
     text-decoration: underline;
 }
+
 
 @media only screen and (max-width : 1200px) {
 

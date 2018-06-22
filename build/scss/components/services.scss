@@ -1,50 +1,33 @@
-.services-home {
-    padding: 5rem 0;
-    background-image: linear-gradient(180deg, #ffffff 0%, #edf5f9 100%);
+.services {
+    // padding: 5rem 0;
+    margin: 4rem 0 0 0;
 }
-
-
-.services-home__title {
-    margin: 0;
+.services__title {
+    margin: 3rem 0 0 0;
     font-size: 2.4rem;
     color: $color-main;
 }
-.services-home__box {
-    margin: 6rem -1.5rem 0 -1.5rem;
-    padding: 0 0 4rem 0;
+.services__box {
+    margin: 0 -1.5rem;
+    // padding: 0 0 4rem 0;
 
     display: flex;
-    overflow-y: auto;
-    &::-webkit-scrollbar-track {
-        background-color: #a8cfeb;
-        border-radius: .5rem;
-        // opacity: .5;
-    }
-    &::-webkit-scrollbar {
-        //background-color: #eee;
-        // width: 1rem;
-        height: 1rem;
-    }
-    &::-webkit-scrollbar-thumb {
-        // width: 1rem;
-        height: 1rem;
-        border-radius: .5rem;
-        background-color: $color-main;
-    }
+    flex-wrap: wrap;
 }
-.services-home__item {
+.services__item {
     display: block;
     text-decoration: none;
     color: inherit;
+
     flex: 0 0 auto;
     width: calc(16.6666% - 3rem);
-    margin: 0 1.5rem;
+    margin: 3rem 1.5rem 0 1.5rem;
     transition: all .5s ease;
     &:hover, &:active {
         color: $color-main;
     }
 }
-.services-home__item-img {
+.services__item-img {
     margin: 0;
     img {
         display: inline-block;
@@ -54,8 +37,8 @@
         height: auto;
     }
 }
-.services-home__item-title {
-    margin: 1rem 0 0 0;
+.services__item-title {
+    margin: 1.5rem 0 0 0;
     font-size: 1.6rem;
 }
 
@@ -64,31 +47,31 @@
 }
 
 @media only screen and (max-width : 992px) {
-    .services-home__item {
+    .services__item {
         width: calc(20% - 3rem);
     }
 }
 
 @media only screen and (max-width : 768px) {
-    .services-home__item {
+    .services__item {
         width: calc(25% - 3rem);
     }
 }
 
 @media only screen and (max-width : 640px) {
-    .services-home__item {
+    .services__item {
         width: calc(33.3333% - 3rem);
     }
 }
 
 @media only screen and (max-width : 480px) {
-    .services-home__item {
+    .services__item {
         width: calc(50% - 3rem);
     }
 }
 
 @media only screen and (max-width : 360px) {
-    .services-home__item {
+    .services__item {
         width: calc(100% - 3rem);
     }
 }

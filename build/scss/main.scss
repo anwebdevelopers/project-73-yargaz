@@ -93,31 +93,46 @@ a {
 		// padding-left: 1.5rem;
 		display: inline-flex;
 		align-items: center;
-		img {
+		svg {
 			flex: 0 0 auto;
 			display: block;
-	        max-width: 2rem;
-	        max-height: 2rem;
-	        width: auto;
-	        height: auto;
+	        width: 1.8rem;
+	        height: 1.8rem;
 			margin-right: 1rem;
+			fill: currentColor;
 	    }
+	}
+	&:hover, &:active {
+		color: #fff;
+        background-color: $color-accent;
 	}
 	&.button_white {
 		background-color: #fff;
 		color: $color-main;
+		&:hover, &:active {
+			color: #fff;
+	        background-color: $color-main;
+		}
+	}
+	&.button_phantom {
+		color: $color-main;
+		background-color: rgba(255,255,255,0);
+		border: 1px solid currentColor;
+		&:hover, &:active {
+			&:hover, &:active {
+				color: #fff;
+				background-color: $color-main;
+			}
+		}
 	}
 	&.button_phantom_accent {
 		color: $color-accent;
 		background-color: rgba(255,255,255,0);
-		border: 1px solid $color-accent;
+		border: 1px solid currentColor;
 		&:hover, &:active {
-			border-color: lighten($color-main, 10%);
+			color: #fff;
+			background-color: $color-accent;
 		}
-	}
-	&:hover, &:active {
-		color: #fff;
-        background-color: lighten($color-main, 10%);
 	}
 }
 .main {
@@ -128,6 +143,7 @@ a {
 	font-size: 4.8rem;
 	line-height: 1;
 	font-weight: 700;
+	word-wrap: break-word;
 }
 .breadcrumbs {
 	margin: 0;
@@ -145,7 +161,7 @@ a {
 			color: $color-main;
 			transition: all .5s ease;
 			&:hover, &:active {
-				color: lighten($color-main, 10%);
+				color: $color-accent;
 			}
 			position: relative;
 			padding: 0 1.5rem 0 0;
@@ -165,15 +181,16 @@ a {
 		margin-top: 2rem;
 	}
 }
-.page__content {
-	margin: 3rem 0 0 0;
+
+.content {
+	// margin: 3rem 0 0 0;
 	line-height: 1.6;
 	* {
 		max-width: 100% !important;
 	}
 	h1,h2,h3,h4,h5,h6 {
-		font-weight: 600;
-		color: #000;
+		font-weight: 700;
+		// color: #000;
 	}
 	p,ul,ol,img {
 		margin-top: 2rem;
@@ -202,7 +219,7 @@ a {
 	        }
 	    }
 	}
-	a {
+	a:not([class]) {
 		text-decoration: none;
 		color: $color-main;
 		transition: all 0.5s ease;
@@ -226,25 +243,88 @@ a {
 		margin-right: 5rem;
 	}
 	table {
-        border-collapse: separate;
-        border-spacing: 2px;
-        border-color: #dadada;
+        border-collapse: collapse;
+        // border-spacing: 2px;
+        // border-color: #dadada;
         display: block;
         overflow-x: auto;
 		max-width: 100%;
-		font-size: 1.4rem;
+		width: 100%;
+		// font-size: 1.4rem;
+		line-height: 1.1;
+		tr {
+			border-bottom: 1px solid transparentize($color-main, .8);
+			th, td {
+	            padding: 1.5rem;
+	            text-align: left;
+				border-bottom: 1px solid transparentize($color-main, .8);
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+	        }
+	        th {
+	            // background-color: $color-main;
+				// color: #fff;
+				font-weight: 700;
+	        }
+	        td {
+	            // background-color: #fff;
+				// color: #000;
+	        }
+		}
 
-        th, td {
-            padding: 2rem;
-            text-align: left;
-        }
-        th {
+    }
+}
+.page{
+    margin: 4rem 0 0 0;
+
+    display: flex;
+}
+.page__main {
+    flex: 0 0 auto;
+    width: 70%;
+}
+.page__aside {
+    align-self: flex-start;
+    flex: 0 0 auto;
+    width: calc(30% - 3rem);
+    margin: 0 0 0 3rem;
+
+}
+.tabs {
+	margin: 4rem 0 0 0;
+}
+.tabs__buttons {
+    ~ .tabs__section {
+        margin: 0;
+    }
+    margin: 4rem -1.5rem 0 -1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    .tabs__button {
+        flex: 0 1 auto;
+        margin: 1.5rem;
+        padding: .5rem 1rem;
+		color: $color-main;
+        &:not(.active) {
+			border-bottom: 1px dotted currentColor;
+		}
+        cursor: pointer;
+        transition: all .5s ease;
+		&:hover, &:active {
+			color: $color-accent
+		}
+        &.active {
+            color: #fff;
             background-color: $color-main;
-			color: #fff;
-        }
-        td {
-            background-color: #fff;
-			color: #000;
+            border-radius: .5rem;
+			// &:hover, &:active {
+			// 	color: #fff;
+			// 	background-color: $color-accent;
+			// }
         }
     }
 }
@@ -253,6 +333,8 @@ a {
 @import "build/scss/components/header.scss";
 @import "build/scss/components/banner.scss";
 @import "build/scss/components/services-home.scss";
+@import "build/scss/components/services-aside.scss";
+@import "build/scss/components/services.scss";
 @import "build/scss/components/news-home.scss";
 @import "build/scss/components/advantages.scss";
 @import "build/scss/components/navigaton.scss";
@@ -260,6 +342,10 @@ a {
 @import "build/scss/components/catalog.scss";
 @import "build/scss/components/category.scss";
 @import "build/scss/components/news.scss";
+@import "build/scss/components/news-aside.scss";
+@import "build/scss/components/application.scss";
+@import "build/scss/components/product.scss";
+@import "build/scss/components/contacts.scss";
 @import "build/scss/components/footer.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
@@ -285,18 +371,43 @@ a {
 	html {
 		font-size: 9px;
 	}
+	.page__main {
+        width: 60%;
+    }
+    .page__aside {
+        width: calc(40% - 3rem);
+    }
 }
 
 @media only screen and (max-width : 768px) {
-
+	.title {
+		font-size: 4.2rem;
+	}
 }
 
 @media only screen and (max-width : 640px) {
-
+	.page__main {
+        width: 48%;
+    }
+    .page__aside {
+        width: calc(52% - 3rem);
+    }
 }
 
 @media only screen and (max-width : 480px) {
-
+	.title {
+		font-size: 3.4rem;
+	}
+	.page{
+        display: block;
+    }
+    .page__main {
+        width: auto;
+    }
+    .page__aside {
+        width: auto;
+        margin: 4rem 0 0 0;
+    }
 }
 
 @media only screen and (max-width : 360px) {

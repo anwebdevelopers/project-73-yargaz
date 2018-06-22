@@ -44,13 +44,12 @@
 }
 .header__emergency-icon {
     flex: 0 0 auto;
-    width: 2rem;
-    img {
+    svg {
         display: inline-block;
         vertical-align: baseline;
-        max-width: 100%;
-        width: auto;
-        height: auto;
+        width: 2rem;
+        height: 2.3rem;
+        fill: $color-accent;
     }
 }
 .header__emergency-text {
@@ -64,7 +63,7 @@
         color: inherit;
         transition: all .5s ease;
         &:hover, &:active {
-            color: $color-main;
+            color: $color-accent;
         }
     }
 }
@@ -84,18 +83,17 @@
     align-items: center;
     transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-main, 10%);
+        color: $color-accent;
     }
 }
 .header__branches-icon {
     flex: 0 0 auto;
-    width: 2rem;
-    img {
+    svg {
         display: inline-block;
         vertical-align: baseline;
-        max-width: 100%;
-        width: auto;
-        height: auto;
+        width: 1.7rem;
+        height: 2.4rem;
+        fill: currentColor;
     }
 }
 .header__branches-text {
@@ -126,7 +124,7 @@
     align-items: center;
     transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-main, 10%);
+        color: $color-accent;
         span {
             color: inherit;
         }
@@ -134,13 +132,13 @@
 }
 .header__contacts-icon {
     flex: 0 0 auto;
-    width: 2rem;
-    img {
+
+    svg {
         display: inline-block;
         vertical-align: baseline;
-        max-width: 100%;
-        width: auto;
-        height: auto;
+        width: 2.3rem;
+        height: 2.3rem;
+        fill: $color-main;
     }
 }
 .header__contacts-text {
@@ -161,7 +159,7 @@
     color: $color-main;
     transition: all .5s ease;
     &:hover, &:active {
-        color: lighten($color-main, 10%);
+        color: $color-accent;
     }
 }
 .header__button {
@@ -223,17 +221,17 @@
     &:active,
     &:hover {
         &:before {
-            //background-color: $light;
+            background-color: $color-accent;
         }
 
         span {
             animation-delay: 0.1s;
-            //background-color: $light;
+            background-color: $color-accent;
         }
 
         &:after {
             animation-delay: 0.2s;
-            //background-color: $light;
+            background-color: $color-accent;
         }
     }
 
@@ -296,7 +294,7 @@
             &:hover, &:active, &.active {
                 > a {
                     //color: $blue;
-                    opacity: .7;
+                    // opacity: .7;
                 }
                 >ul {
                     visibility: visible;
@@ -310,8 +308,8 @@
                 color: #fff;
                 white-space: nowrap;
                 &:hover, &:active {
-                    //color: $blue;
-                    opacity: .7;
+                    color: $color-accent;
+                    //opacity: .7;
                 }
             }
             // &:first-child {
@@ -429,7 +427,7 @@
         padding: .1rem 0 .1rem 3rem;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 1);
-        //border-radius: 3rem;
+        border-radius: 0;
         font-size: 1.4rem;
         font-weight: 400;
         font-family: inherit;
@@ -437,7 +435,7 @@
         color: #fff;
         transition: all .5s ease;
         &:hover, &:focus {
-            //border-bottom-color: #fff;
+            border-bottom-color: $color-accent;
         }
         &::-webkit-input-placeholder {
         	color: #fff;
@@ -468,19 +466,21 @@
         left: 0rem;
         top: 50%;
         transform: translateY(-50%);
+        color: #fff;
         transition: all .5s ease;
-        img {
+        svg {
             // position: absolute;
             // right: 0;
             top: 50%;
             // transform: translateY(-50%);
             width: 2rem;
             height: 2rem;
-            // fill: $gray;
+            fill: currentColor;
             // transition: inherit;
         }
         &:hover, &:focus {
-            opacity: .7;
+            //opacity: .7;
+            color: $color-accent;
         }
     }
 }

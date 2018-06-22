@@ -58,13 +58,53 @@ $(function() {
     /*******************************************************/
     //SERVICES TABS
     /*******************************************************/
-    $('.services-home__tabs').each(function() {
-        $(this).prepend('<div class="services-home__buttons"></div>');
-        $(this).find('.services-home__title').appendTo('.services-home__buttons');
-        $(this).children('.services-home__section').not(':first').hide();
-        $(this).children('.services-home__buttons').on('click', '.services-home__title:not(.active)', function() {
-            $(this).addClass('active').siblings().removeClass('active').closest('.services-home__tabs').children('.services-home__section').stop().slideUp(300).eq($(this).index()).stop().slideDown(300);
-        }).children('.services-home__title').first().addClass('active');
+    $('.tabs').each(function() {
+        $(this).prepend('<div class="tabs__buttons"></div>');
+        $(this).find('.tabs__button').appendTo('.tabs__buttons');
+        $(this).children('.tabs__section').not(':first').hide();
+        $(this).children('.tabs__buttons').on('click', '.tabs__button:not(.active)', function() {
+            $(this).addClass('active').siblings().removeClass('active').closest('.tabs').children('.tabs__section').stop().slideUp(300).eq($(this).index()).stop().slideDown(300);
+        }).children('.tabs__button').first().addClass('active');
     });
+
+    /*******************************************************/
+    //YANDEX MAP
+    /*******************************************************/
+    if (typeof ymaps === 'object') {
+        ymaps.ready(function() {
+            var myMap;
+            myMap = new ymaps.Map('map', {
+                    center: [57.631844, 39.869668],
+                    zoom: 14,
+                    controls: [],
+                    behaviors: ['drag', 'dblClickZoom', 'rightMouseButtonMagnifier', 'multiTouch']
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+            myMap.controls.add('zoomControl', {
+                size: 'small',
+                position: {
+                    top: 'auto',
+                    left: 10,
+                    bottom: 50
+                }
+            }),
+            myMap.geoObjects.add(new ymaps.Placemark([57.631844, 39.869668], {
+                hintContent: '',
+                balloonContent: ''
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: 'img/icon-map.svg',
+                iconImageSize: [31, 44],
+                iconImageOffset: [-16, -44]
+            }));
+            function disableDrag() {
+                var w = $(window).width();
+                w <= 992 ? myMap.behaviors.disable('drag') : myMap.behaviors.enable('drag');
+            }
+            disableDrag();
+            $(window).resize(disableDrag);
+        });
+    }
 
 });

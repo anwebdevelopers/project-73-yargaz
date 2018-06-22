@@ -1,0 +1,67 @@
+.contacts {
+    margin: 4rem 0 0 0;
+}
+.contacts__title {
+    font-size: 2.4rem;
+    color: $color-main;
+}
+.contacts__box {
+    margin: 4rem 0 0 0;
+    column-count: 3;
+    column-gap: 3rem;
+}
+.contacts__item {
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
+    break-inside: avoid;
+}
+.contacts__item-title {
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contacts__item-text {
+    margin: 1rem 0 0 0;
+    line-height: 1.6;
+    color: #777;
+    a {
+        color: $color-main;
+        transition: all .5s ease;
+        &:hover, &:active {
+            color: $color-accent;
+        }
+    }
+}
+.contacts__map {
+    margin: 4rem 0 0 0;
+    height: 50rem;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .contacts__box {
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .contacts__box {
+        column-count: auto;
+    }
+}
+
+@media only screen and (max-width : 360px) {
+
+}

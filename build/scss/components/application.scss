@@ -1,0 +1,101 @@
+.application {
+    margin: 7rem 0 0 0;
+}
+.application__title {
+    margin: 0;
+    font-size: 3.6rem;
+    +.application__item {
+        margin-top: 5rem;
+    }
+}
+.application__item {
+    padding: 2rem 0;
+    border-bottom: 1px solid transparentize($color-main, .8);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.application__item-label {
+    flex: 0 0 auto;
+    align-self: center;
+    display: block;
+    width: 40%;
+    font-weight: 700;
+}
+.application__item-input {
+    flex: 0 0 auto;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    display: block;
+    width: calc(60% - 2rem);
+    margin: 0 0 0 2rem;
+    padding: 1rem;
+    border: 1px solid $color-main;
+    border-radius: .3rem;
+    transition: all .5s ease;
+    &:hover, &:focus {
+        border-color: $color-accent;
+    }
+}
+.application__item-hint {
+    margin: 1.5rem 0 0 calc(40% + 2rem);
+    line-height: 1.6;
+    color: #777;
+}
+.application__submit {
+    margin: 4rem 0 0 calc(40% + 2rem);
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .application__item {
+        display: block;
+    }
+    .application__item-label {
+        width: auto;
+    }
+    .application__item-input {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+    .application__item-hint {
+        margin: 1.5rem 0 0 0;
+    }
+    .application__submit {
+        margin: 4rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 640px) {
+    // .application__item {
+    // display: flex;
+    // }
+    // .application__item-label {
+    // width: 40%;
+    // }
+    // .application__item-input {
+    // width: calc(60% - 2rem);
+    //     margin: 0 0 0 2rem;
+    // }
+    // .application__item-hint {
+    // margin: 1.5rem 0 0 calc(40% + 2rem);
+    // }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
